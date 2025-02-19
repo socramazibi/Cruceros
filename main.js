@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const pdfInput = document.getElementById("pdfInput");
 
     // Definir el PDF por defecto
-    const defaultPDF = "Programación Cruceros 2025 V5.9.pdf";
+    const defaultPDF = "cruceros.pdf";
     pdfViewer.src = defaultPDF;
 
     // Actualizar PDF si el usuario cambia el nombre
