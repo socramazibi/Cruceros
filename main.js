@@ -1,19 +1,13 @@
-function loadPDF() {
-  const pdfInput = document.getElementById('pdfInput');
-  const pdfViewer = document.getElementById('pdfViewer');
-  const pdfPath = pdfInput.value.trim();
-  
-  if (pdfPath) {
-    pdfViewer.src = pdfPath;
-  }
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const pdfViewer = document.getElementById("pdfViewer");
+    const pdfInput = document.getElementById("pdfInput");
 
-document.addEventListener('DOMContentLoaded', () => {
-  const pdfInput = document.getElementById('pdfInput');
-  
-  // Cargar el PDF inicial
-  loadPDF();
-  
-  // Cargar PDF cuando cambie el valor del input
-  pdfInput.addEventListener('input', loadPDF);
+    // Definir el PDF por defecto
+    const defaultPDF = "Programación Cruceros 2025 V5.9.pdf";
+    pdfViewer.src = defaultPDF;
+
+    // Actualizar PDF si el usuario cambia el nombre
+    pdfInput.addEventListener("input", function () {
+        pdfViewer.src = pdfInput.value;
+    });
 });
